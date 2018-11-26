@@ -21,6 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home', views.homepage, name = 'home'),
     path('countthewords/', views.count, name = 'count'),
-    path('about/', views.about, name = 'about')
+    path('about', views.about, name = 'about')
 
     ]
