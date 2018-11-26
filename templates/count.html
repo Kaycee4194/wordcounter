@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+</head>
+<body>
+<h1>Hello {{ name }}!!</h1>
+<br/>
+<a href="{% url 'home' %}">New Count</a>
+
+<h2>There are {{ wordcount }} words in your sentence</h2>
+<h3>The most frequently appearing {{ wrd0 }} {{ wrd1 }}: </h3>
+    {% for word in words %}
+        <h3><b><i>"{{ word }}"</i></b>
+        and appears {{ max_value }} time(s) </h3>
+        {% endfor %}
+
+<b>Your Text: </b>"<i>{{ text }}</i>"
+<h1>word count</h1>
+{% for key,value in sortd.items %}
+        "{{ key }}" - {{value }}
+        <br/>
+    {% endfor %}
+
+<p>Bye!!!</p>
+
+</body>
+</html>
